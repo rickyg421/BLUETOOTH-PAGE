@@ -42,45 +42,38 @@
     }
 
     @keyframes pulse {
-      0% {
-        transform: scale(1);
-        opacity: 1;
-      }
-      50% {
-        transform: scale(1.08);
-        opacity: 0.75;
-      }
-      100% {
-        transform: scale(1);
-        opacity: 1;
-      }
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.08); opacity: 0.75; }
+      100% { transform: scale(1); opacity: 1; }
     }
 
     .instructions {
-      background-color: white;
       padding: 20px;
       margin-top: 30px;
       width: 90%;
       max-width: 500px;
-      border-radius: 12px;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
     }
 
     .step {
-      background-color: #eef4ff;
-      padding: 14px;
-      border-radius: 8px;
-      margin: 12px 0;
+      padding: 16px;
+      border-radius: 12px;
+      color: white;
       font-size: 1.1rem;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
 
+    .step1 { background-color: #4A90E2; } /* Blue */
+    .step2 { background-color: #50E3C2; } /* Teal */
+    .step3 { background-color: #F5A623; } /* Orange */
+    .step4 { background-color: #9013FE; } /* Purple */
+
     @media (max-width: 480px) {
-      h1 {
-        font-size: 1.5rem;
-      }
-      .step {
-        font-size: 1rem;
-      }
+      h1 { font-size: 1.5rem; }
+      .step { font-size: 1rem; }
     }
   </style>
 </head>
@@ -95,17 +88,17 @@
   </div>
 
   <div class="instructions">
-    <div class="step">
+    <div class="step step1">
       📱 Go to your phone’s Bluetooth settings.
     </div>
-    <div class="step">
-      🔍 Find and select the device named <strong>"TOYOTA COROLLA CROSS"</strong>.
+    <div class="step step2">
+      🔍 Find and select <strong>"TOYOTA COROLLA CROSS"</strong>.
     </div>
-    <div class="step">
-      🔑 Enter the PIN if prompted, or confirm the pairing request.
+    <div class="step step3">
+      🔑 Enter the PIN if asked, or confirm the pairing request.
     </div>
-    <div class="step">
-      🎵 You're connected! Start playing music from your phone.
+    <div class="step step4">
+      🎵 You're connected! Hit play and enjoy the ride.
     </div>
   </div>
 
